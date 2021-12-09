@@ -39,6 +39,28 @@
         >
       </div>
       <div class="mb-3">
+        <label for="phone-input" class="form-label">Phone</label
+        ><input
+          type="number"
+          class="form-control"
+          id="phone-input"
+          required=""
+          placeholder="Phone number"
+          v-model="phone"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="address-input" class="form-label">Billing address</label
+        ><input
+          type="text"
+          class="form-control"
+          id="address-input"
+          required=""
+          placeholder="Address"
+          v-model="billingAddress"
+        />
+      </div>
+      <div class="mb-3">
         <label for="password-input" class="form-label">Password</label
         ><input
           type="password"
@@ -63,6 +85,8 @@ export default {
       nameFirst: "",
       nameLast: "",
       email: "",
+      phone: "",
+      billingAddress: "",
       password: "",
       errorMessage: "",
       dupEmail: false,
@@ -70,14 +94,16 @@ export default {
   },
   methods: {
     onSubmit() {
-      //console.log("form submitted");
+      console.log("form submitted");
       const myFormData = {
         nameFirst: this.nameFirst,
         nameLast: this.nameLast,
         email: this.email,
+        phone: this.phone,
+        billingAddress: this.billingAddress,
         password: this.password,
       };
-      //console.log(myFormData);
+      console.log(myFormData);
       axios
         .post("/attendee", myFormData)
         .then((myResponse) => {
