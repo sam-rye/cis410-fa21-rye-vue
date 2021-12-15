@@ -2,17 +2,17 @@
   <div>
     <div class="card">
       <div class="card-body">
-        <h2 class="text-primary">{{ concert.VenueName }}</h2>
+        <h2 class="text-primary">{{ concert.ArtistName }}</h2>
         <br />
 
         <p>
-          Insert Name: <br /><strong>{{ concert.Location }}</strong>
+          Music Genre: <br /><strong>{{ concert.Genre }}</strong>
         </p>
         <p>
-          Insert Name: <br /><strong>{{ concert.Capacity }}</strong>
+          Venue Capacity: <br /><strong>{{ concert.Capacity }}</strong>
         </p>
         <p>
-          Insert Name: <br /><strong>{{ concert.Time }}</strong>
+          Concert Date: <br /><strong>{{ concert.Date }}</strong>
         </p>
       </div>
     </div>

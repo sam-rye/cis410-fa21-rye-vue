@@ -5,15 +5,15 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Date</th>
-          <th>Insert Name</th>
-          <th>Insert Name</th>
+          <th>Artist</th>
+          <th>City</th>
+          <th>Venue</th>
           <th></th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="aConcert in theConcerts" :key="aConcert.ConcertPK">
-          <th>{{ aConcert.Date }}</th>
+          <th>{{ aConcert.ArtistName }}</th>
           <th>{{ aConcert.Location }}</th>
           <th>{{ aConcert.VenueName }}</th>
           <th>
